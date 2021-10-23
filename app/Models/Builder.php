@@ -9,5 +9,5 @@ class Builder extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = 'agents';
+    protected $table = 'sales_agents';
 }

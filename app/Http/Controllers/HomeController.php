@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AgentAdd;
 use App\Models\Builder;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -55,16 +57,14 @@ class HomeController extends Controller
 
         $agent = new Builder();
         $agent->user_id = $user->id;
-        $agent->lender_id = 0;
-        $agent->min_price = 0;
-        $agent->max_price = 0;
+
 
         $agent->firstname = $request->first_name;
         $agent->lastname = $request->last_name;
         $agent->email = $request->email_address;
         $agent->cell = $request->cell;
-        $agent->is_interested = $request->is_interested;
-        $agent->broker_name = $request->brokerage_name;
+        $agent->is_interested = $request->is_interested?1:0;
+        $agent->office_name = $request->brokerage_name;
         $agent->title = $request->title;
         $agent->agent_code = $agent_code;
         $agent->license = $request->license;
@@ -74,6 +74,9 @@ class HomeController extends Controller
         $agent->created = time();
         $agent->updated = time();
         $agent->save();
+
+        Mail::to($request->email_address)
+            ->send(new AgentAdd($request->first_name));
 
         return redirect('/thank-you');
 

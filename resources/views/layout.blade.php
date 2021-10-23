@@ -11,12 +11,27 @@
     <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('css/default.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('fonts/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('fonts/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css?v='.time()) }}">
+    <link rel="stylesheet" href="{{ asset('fonts/style.css?v='.time()) }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css?v='.time()) }}">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+
+    <style>
+        ::placeholder {
+            color: #cecece;
+            opacity: 1; /* Firefox */
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #cecece;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #cecece;
+        }
+    </style>
 </head>
 
 <body>
@@ -231,7 +246,7 @@
         <div class="container-fluid" style="position: relative">
 
             <div class="row">
-                <div class="col-xl-10 col-md-4 col-sm-12 col-16">
+                <div class="col-xl-9 col-md-8 col-sm-6 col-6">
                     <div class="bentory-header-left pt-23 pb-23">
                         <div class="bentory-logo">
                             <h1>
@@ -240,9 +255,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="mob-reduce col-xl-2 col-md-8 col-sm-12 col-12 pt-25 p-r">
+                <div class="mob-reduce col-xl-3 col-md-4 col-sm-6 col-6 pt-25 p-r">
                     <div class="bentory-header-searchBtn">
-                        <a href="">Get Early Access</a>
+                        <a href="">GET FREE EARLY ACCESS</a>
                     </div>
 
                 </div>
@@ -268,14 +283,12 @@
             <div class="bntory-wrapper pt-90 pb-150">
                 <ul class="bentory-utilities-menus mt-30">
 
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Agent Login</a></li>
+                    <li><a href="#">Realtor Terms of Use</a></li>
+                    <li><a href="#">Realtor Privacy Policy</a></li>
+                    <li><a href="https://buildentory.com/admin">Agent Login</a></li>
                 </ul>
                 <div class="bentory-disclaim-box mt-30">
-                    <p>Disclaimer: Buildentory.com, Buildentory iOS & Android App promotes licensed Realtors, Mortgage Loan Officers and local/national Builders.<br>
-                        We does not assume any liability for inaccuracies. We ask you independently verify community, new home, lot, land acreage, rental data via<br>
-                        listing agencies and authorized builder sales representatives.</p>
+                    <p>Disclaimer: Buildentory.com, Buildentory iOS & Android App promotes licensed Realtors, Mortgage Loan Officers and local/national Builders. We do not assume any liability for inaccuracies. We ask that you independently verify community, new home, lot, land acreage and/or rental data via listing agencies and authorized builder sales representatives.</p>
                 </div>
                 <ul class="bentory-social-menus mt-30">
                     <li><a href="https://www.facebook.com/Buildentory/?ref=py_c&__xts__=68" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -396,16 +409,37 @@
                 success: function (data) {
                     if (data == 'exists') {
                         $("#loading_div").css('display', 'none');
-                        $("#loading_status").html('Try different code, this code is not available');
+                        $("#loading_status").html('Sorry, this agent code is not available. Please reset and try again.');
                         $("#loading_status").css('color', 'red');
                     } else {
                         $("#loading_div").css('display', 'none');
-                        $("#loading_status").html('Congrats! This code is available');
+                        $("#loading_status").html('Congratulations, this agent code is available!');
                         $("#loading_status").css('color', 'green');
                     }
                 }
             });
         }
+    }
+
+    function resetCode(){
+        $("#text_1").val('');
+        $("#text_2").val('');
+        $("#text_3").val('');
+        $("#text_4").val('');
+        $("#text_5").val('');
+        $("#text_6").val('');
+        $("#text_7").val('');
+
+        $("#texth_1").val('');
+        $("#texth_2").val('');
+        $("#texth_3").val('');
+        $("#texth_4").val('');
+        $("#texth_5").val('');
+        $("#texth_6").val('');
+        $("#texth_7").val('');
+
+        $("#loading_status").html('');
+
     }
 
 

@@ -26,7 +26,7 @@
     font-weight: normal;
     src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
     }
-    
+
 
     @font-face {
     font-family: 'Myriad Pro Condensed';
@@ -34,7 +34,7 @@
     font-weight: normal;
     src: local('Myriad Pro Condensed'), url('MYRIADPRO-COND.woff') format('woff');
     }
-    
+
 
     @font-face {
     font-family: 'Myriad Pro Condensed Italic';
@@ -297,11 +297,11 @@ label {
     height: 150px;
     width: 150px;
     margin-top: -75px;
-    margin-left: -75px;	
-    -ms-transform: rotate(45deg); 
+    margin-left: -75px;
+    -ms-transform: rotate(45deg);
        -webkit-transform: rotate(45deg);
-      transform: rotate(45deg); 
-  
+      transform: rotate(45deg);
+
   }
   .object{
     width: 20px;
@@ -316,59 +316,59 @@ label {
     }
   .object:nth-child(2n+0) {
     margin-right: 0px;
-  
+
   }
   #object_one {
     -webkit-animation: object_one 2s infinite;
     animation: object_one 2s infinite;
-    -webkit-animation-delay: 0.2s; 
-      animation-delay: 0.2s; 
+    -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
     }
   #object_two {
     -webkit-animation: object_two 2s infinite;
     animation: object_two 2s infinite;
-    -webkit-animation-delay: 0.3s; 
-      animation-delay: 0.3s; 
+    -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
     }
   #object_three {
     -webkit-animation: object_three 2s infinite;
     animation: object_three 2s infinite;
-    -webkit-animation-delay: 0.4s; 
-      animation-delay: 0.4s; 
+    -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s;
     }
   #object_four {
     -webkit-animation: object_four 2s infinite;
     animation: object_four 2s infinite;
-    -webkit-animation-delay: 0.5s; 
-      animation-delay: 0.5s; 
+    -webkit-animation-delay: 0.5s;
+      animation-delay: 0.5s;
   }
   #object_five {
     -webkit-animation: object_five 2s infinite;
     animation: object_five 2s infinite;
-    -webkit-animation-delay: 0.6s; 
-      animation-delay: 0.6s; 
+    -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
   }
   #object_six {
     -webkit-animation: object_six 2s infinite;
     animation: object_six 2s infinite;
-    -webkit-animation-delay: 0.7s; 
-      animation-delay: 0.7s; 
+    -webkit-animation-delay: 0.7s;
+      animation-delay: 0.7s;
   }
   #object_seven {
     -webkit-animation: object_seven 2s infinite;
     animation: object_seven 2s infinite;
-    -webkit-animation-delay: 0.8s; 
-      animation-delay: 0.8s; 
+    -webkit-animation-delay: 0.8s;
+      animation-delay: 0.8s;
   }
   #object_eight {
     -webkit-animation: object_eight 2s infinite;
     animation: object_eight 2s infinite;
-     -webkit-animation-delay: 0.9s; 
-      animation-delay: 0.9s; 
+     -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
   }
-  
+
   #object_big{
-    
+
     position: absolute;
     width: 50px;
     height: 50px;
@@ -376,148 +376,148 @@ label {
     top: 50px;
     -webkit-animation: object_big 2s infinite;
     animation: object_big 2s infinite;
-    -webkit-animation-delay: 0.5s; 
-      animation-delay: 0.5s; 
-  }	
-  
-  
-  
-  
+    -webkit-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+  }
+
+
+
+
   @-webkit-keyframes object_big {
    50% { -webkit-transform: scale(0.5); }
-  
+
   }
-  
+
   @keyframes object_big {
-   50% { 
+   50% {
       transform: scale(0.5);
       -webkit-transform: scale(0.5);
-    } 
-  
+    }
+
   }
-  
-  
-  
-  
+
+
+
+
   @-webkit-keyframes object_one {
    50% { -webkit-transform: translate(-65px,-65px)  ; }
-  
+
   }
-  
+
   @keyframes object_one {
-   50% { 
+   50% {
       transform: translate(-65px,-65px) ;
       -webkit-transform: translate(-65px,-65px) ;
-    } 
-  
+    }
+
   }
-  
-  
-  
+
+
+
   @-webkit-keyframes object_two {
     50% { -webkit-transform: translate(0,-65px) ; }
   }
-  
+
   @keyframes object_two {
-   50% { 
-      transform: translate(0,-65px) ; 
-      -webkit-transform: translate(0,-65px) ; 
-    } 
-  
+   50% {
+      transform: translate(0,-65px) ;
+      -webkit-transform: translate(0,-65px) ;
+    }
+
   }
-  
-  
-  
+
+
+
   @-webkit-keyframes object_three {
    50% { -webkit-transform: translate(65px,-65px) ; }
   }
-  
+
   @keyframes object_three {
-   50% { 
+   50% {
       transform: translate(65px,-65px) ;
       -webkit-transform: translate(65px,-65px) ;
-    } 
+    }
   }
-  
-  
-  
+
+
+
   @-webkit-keyframes object_four {
-    
+
     50% { -webkit-transform: translate(65px,0) ; }
-  
+
   }
-  
+
   @keyframes object_four {
-    50% { 
+    50% {
       transform: translate(65px,0) ;
       -webkit-transform: translate(65px,0) ;
-    } 
-  
+    }
+
   }
-  
-  
-  
-  
+
+
+
+
   @-webkit-keyframes object_five {
-    
+
     50% { -webkit-transform: translate(65px,65px) ; }
-  
+
   }
-  
+
   @keyframes object_five {
-    50% { 
+    50% {
       transform: translate(65px,65px) ;
       -webkit-transform: translate(65px,65px) ;
-    } 
-  
+    }
+
   }
-  
-  
-  
+
+
+
   @-webkit-keyframes object_six {
-    
+
     50% { -webkit-transform: translate(0,65px) ; }
-  
+
   }
-  
+
   @keyframes object_six {
-    50% { 
+    50% {
       transform:  translate(0,65px) ;
       -webkit-transform:  translate(0,65px) ;
-    } 
-  
+    }
+
   }
-  
-  
-  
-  
+
+
+
+
   @-webkit-keyframes object_seven {
-    
+
     50% { -webkit-transform: translate(-65px,65px) ; }
-  
+
   }
-  
+
   @keyframes object_seven {
-    50% { 
+    50% {
       transform: translate(-65px,65px) ;
       -webkit-transform: translate(-65px,65px) ;
-    } 
-  
+    }
+
   }
-  
-  
+
+
   @-webkit-keyframes object_eight {
-    
+
     50% { -webkit-transform: translate(-65px,0) ; }
-  
+
   }
-  
+
   @keyframes object_eight {
-    50% { 
+    50% {
       transform: translate(-65px,0) ;
       -webkit-transform: translate(-65px,0) ;
-    } 
-  
+    }
+
   }
   .bentory-logo {
     width: 180px;
@@ -553,7 +553,7 @@ label {
 	width: 1200px;
 	margin: 0 auto;
 	overflow:hidden;
-	
+
 }
 
 .be-signUp{
@@ -578,18 +578,18 @@ label {
 	display: inline-block;
 	line-height: 46px;
 	position: relative;
-	
+
 	overflow: hidden;
 }
  .bentory-main-nav li a:hover::after,
  .bentory-main-nav li.bentory-menu-selected a::after{
 	transform: translateX(0px);
-} 
+}
 
 
 .bentory-header-searchBtn,
 .be-login2 {
-    width: 154px;
+    width: 225px;
     height: 35px;
     border: 1px solid #efe6e6;
     border-radius: 10px;
@@ -623,7 +623,7 @@ label {
 	width: 100%;
 	position: relative;
 	background-image: linear-gradient(#fbfeff 20%,  #b7f1fd  80%);
-	
+
 	animation: bentoryDaylight 20s  ;
 }
 
@@ -632,8 +632,8 @@ label {
 		opacity: 0.10;
 	}
 	100% {
-		opacity: 1;	
-	}	
+		opacity: 1;
+	}
   } */
 
 .bentory-footer-top__inner{
@@ -652,7 +652,7 @@ label {
     left: 2%;
     top: 35%;
     z-index: 10;
-	
+
 }
 
 .bentory-footer-top.bentory-common-animaiton.bentory-acitive.bentory-footer-top:before{
@@ -667,10 +667,10 @@ label {
 
 	100% {
 		left: 100%;
-	
+
 	}
-	
-	
+
+
   }
 
 .bentory-footer-top:after {
@@ -682,7 +682,7 @@ label {
     top: 27%;
     background: #fff600;
     border-radius: 50%;
-	
+
 }
 
 /* .bentory-footer-top.bentory-common-animaiton.bentory-acitive:after{
@@ -697,10 +697,10 @@ label {
 
 	100% {
 		opacity: 1;
-	
+
 	}
-	
-	
+
+
   } */
 
 .bentory-footer-top.bentory-acitive:after{
@@ -719,7 +719,7 @@ label {
 }
 
 .bentory-footer-top.bentory-common-animaiton.bentory-acitive  .bentory-footer-top__inner:before{
-	animation: cloud_three 70s infinite 
+	animation: cloud_three 70s infinite
 }
 
 @keyframes cloud_three {
@@ -729,10 +729,10 @@ label {
 
 	100% {
 		right: 100%;
-	
+
 	}
-	
-	
+
+
   }
 /* .bentory-footer-top__inner:after {
     width: 96px;
@@ -741,7 +741,7 @@ label {
     content: url('../img/cloud_four.png');
     right: 0px;
     top: 0px;
-	
+
 } */
 .bentory-footer-top__inner:after {
     width: 96px;
@@ -754,7 +754,7 @@ label {
 }
 
 .bentory-footer-top.bentory-common-animaiton.bentory-acitive  .bentory-footer-top__inner:after{
-	animation: cloud_four 90s infinite 
+	animation: cloud_four 90s infinite
 }
 
 @keyframes cloud_four {
@@ -764,10 +764,10 @@ label {
 
 	100% {
 		right: 100%;
-	
+
 	}
-	
-	
+
+
   }
  /* footer menu  */
 
@@ -822,7 +822,7 @@ ul.bentory-utilities-menus li::after {
 
 ul.bentory-utilities-menus li:last-child::after{
 	display: none;
-} 
+}
 .bentory-disclaim-box{
 	width: 100%;
 	text-align: center;
@@ -858,7 +858,7 @@ ul.bentory-utilities-menus li:last-child::after{
 	margin-right: 18px;
 	position: relative;
 	z-index: 12;
-	
+
 }
 .bentory-social-menus a i {
     font-size: 32px;
@@ -937,7 +937,7 @@ ul.bentory-utilities-menus li:last-child::after{
     z-index: -12;
 }
 .bentory-banner-menu li:last-child a{
-	left: 1px!important;	
+	left: 1px!important;
 }
 /* .bentory-banner-menu a:nth-last-child(3n) {
 	left: 0px!important;
@@ -974,7 +974,7 @@ ul.bentory-utilities-menus li:last-child::after{
 	margin-right: 6px!important;
 }
 
-.bentory-devices-utility 
+.bentory-devices-utility
 
 /* banner search  */
 .bentory-banner-search{
@@ -1010,7 +1010,7 @@ input.entory-search-btn {
 	overflow: hidden;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
-	transition: .5s;    
+	transition: .5s;
 }
 
 input.entory-search-btn:hover{
@@ -1049,13 +1049,13 @@ input.entory-search-btn:hover{
 	background-size:100% 100%;
 }
 .search-new-home{
-	display: flex;	
+	display: flex;
 }
 .search-new-home-left,
 .search-new-home-mid,
-.search-new-home-right{	
+.search-new-home-right{
 	width: 100%;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .search-new-home-right a{
@@ -1070,7 +1070,7 @@ input.entory-search-btn:hover{
 	padding: 40px 0 40px;
 	transition: .5s;
 	line-height: 1.5;
-	
+
 }
 /* popular city  */
 
@@ -1112,12 +1112,12 @@ ul.bentory-popular-menus li a:after {
     bottom: -4px;
 	transform: scale(0);
 	transition: .3s;
-	
+
 }
 
 ul.bentory-popular-menus li a:hover::after{
 	transform: scale(1);
-} 
+}
 
 
 .bentory-city-title{
@@ -1185,7 +1185,7 @@ ul.bentory-popular-menus li a:hover::after{
 }
 .bentory-singing-roundbox .be-singing-input{
 	background: none;
-} 
+}
 .bentory-signing-menus{
 	display: flex;
 	padding-bottom: 17px;
@@ -1309,7 +1309,7 @@ ul.bentory-popular-menus li a:hover::after{
 		transition: .5s;
 	}
 
-	
+
 	.mobule_hamburger_btn_alter .be-hamber-1{
 		transform: rotate(45deg);
 	}
@@ -1351,13 +1351,13 @@ ul.bentory-popular-menus li a:hover::after{
 		z-index: 20000;
 		transition: .3s ease-in-out;
 		overflow:hidden;
-		padding: 0px 40px;	
+		padding: 0px 40px;
 	}
 
-	
 
-	.bentory-main-menu--mobile.bentory-mob-active{	
-		height: 400px;	
+
+	.bentory-main-menu--mobile.bentory-mob-active{
+		height: 400px;
 	}
 
 	.bentory-main-menu--mobile ul{
@@ -1370,7 +1370,7 @@ ul.bentory-popular-menus li a:hover::after{
 		color: #000;
 		font-size: 1.375rem;
 		line-height: 1.5;
-		padding-bottom: 10px;		
+		padding-bottom: 10px;
 	}
 
 	.bentory-main-menu--mobile li a{
@@ -1387,7 +1387,7 @@ ul.bentory-popular-menus li a:hover::after{
 	}
 
  /* map list component  pagec
- 
+
  ##############################################*/
 
  .bentory-maplsit-modalPanel,
@@ -1452,7 +1452,7 @@ ul.bentory-popular-menus li a:hover::after{
 	margin: 0 auto;
 	padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
   }
-  
+
   /* Then style the iframe to fit in the container div with full height and width */
   .responsive-iframe{
 	position: absolute;
@@ -1463,7 +1463,7 @@ ul.bentory-popular-menus li a:hover::after{
 	width: 100%;
 	height: 100%;
   }
-  
+
 
 .bentory-user-sign-mobile{
 	display: none;
@@ -1519,7 +1519,7 @@ ul.bentory-popular-menus li a:hover::after{
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 16px;
-	
+
 }
 
 .bentory-type-chexkbox-menu li{
@@ -1716,8 +1716,8 @@ h3.title-bentory-house--gal:after {
 }
 .row-maplist{
 	display: flex;
-	
-	
+
+
 }
 .bentory-maplis--pagination{
 	width: 100%;
@@ -1892,7 +1892,7 @@ select {
 	-webkit-appearance: none;
 	padding-left: 6px;
   }
-  
+
   /* For IE10 */
   select::-ms-expand {
 	display: none;
@@ -1915,7 +1915,7 @@ select {
     right: -180px;
     top: 1%;
     transform: translateX(-50%);
-    /* transform: rotate( 
+    /* transform: rotate(
 -90deg
  ); */
     transform-origin: center;
@@ -1933,7 +1933,7 @@ select {
 	color: #000;
 	font-size: 19.51px;
 	margin: 0px 10px;
-	
+
 }
 
 span.bentory-map-mid-arrow {
@@ -2063,13 +2063,13 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 
 
 
-  
+
   .wrapper .title{
 	font-weight: 700;
 	font-size: 24px;
 	color: #fff;
   }
-  
+
   .select_wrap{
 	position: relative;
 	user-select: none;
@@ -2082,7 +2082,7 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
   .select_wrap p{
 	  font-size: 1rem;
   }
-  
+
   .select_wrap .default_option {
     background: #fff;
     border-radius: 10px;
@@ -2097,7 +2097,7 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	  padding: 5px 20px;
 	  height: 40px;
   }
-  
+
   .select_wrap .default_option:before{
 	  content: url('../img/icon_select_box.png');
 	  position: absolute;
@@ -2107,7 +2107,7 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	  height: 10px;
 	  transform:scaleY(1);
   }
-  
+
   .select_wrap .select_ul{
 	position: absolute;
 	padding-top: 10px;
@@ -2128,23 +2128,23 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	top: 2px;
 	position: relative;
   }
-  
+
   .select_wrap .select_ul li{
 	padding: 0px 20px;
 	cursor: pointer;
   }
-  
+
   .select_wrap .select_ul li:first-child:hover{
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
   }
-  
+
   .select_wrap .select_ul li:last-child:hover{
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
   }
-  
-  
+
+
 
   #select_ul li{
 	  padding: 0px;
@@ -2158,47 +2158,47 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
   }
 
 
-  
-  
+
+
   .select_wrap .option{
 	display: flex;
 	align-items: center;
   }
-  
+
   .select_wrap .option .icon{
 	background: url('food_items.png') no-repeat 0 0;
 	  width: 32px;
 	  height: 32px;
 	margin-right: 15px;
   }
-  
+
   .select_wrap .option.pizza .icon{
 	background-position: 0 0;
   }
-  
+
   .select_wrap .option.burger .icon{
 	background-position:  0 -35px;
   }
-  
+
   .select_wrap .option.ice .icon{
 	background-position: 0 -72px;
   }
-  
+
   .select_wrap .option.fries .icon{
    background-position: 0 -111px;
 	width: 25px;
   }
-  
+
   .select_wrap.active .select_ul{
 	display: block;
   }
-  
+
   /* .select_wrap.active .default_option:before{
 	top: 20px;
 	transform:scaleY(-1)
   } */
 
-  
+
   .row-map-pagecomponent{
 	  display: flex;
 	  width: 1200px;
@@ -2225,14 +2225,14 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	-ms-user-select: none;
 	user-select: none;
   }
-  
+
   /* Hide the browser's default radio button */
   .container-check-box input {
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
   }
-  
+
   /* Create a custom radio button */
   /* .checkmark {
 	position: absolute;
@@ -2244,28 +2244,28 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	border-radius: 50%;
   }
    */
-/* 
+/*
   .container-check-box:hover input ~ .checkmark {
 	background-color: #ccc;
   }
-  
- 
+
+
   .container-check-box input:checked ~ .checkmark {
 	background-color: #2196F3;
   }
-  
- 
+
+
   .checkmark:after {
 	content: "";
 	position: absolute;
 	display: none;
   }
-  
+
 
   .container-check-box input:checked ~ .checkmark:after {
 	display: block;
   }
-  
+
 
   .container-check-box .checkmark:after {
 	  top: 7px;
@@ -2290,7 +2290,7 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	-ms-user-select: none;
 	user-select: none;
   }
-  
+
   /* Hide the browser's default checkbox */
   .container input {
 	position: absolute;
@@ -2299,7 +2299,7 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	height: 0;
 	width: 0;
   }
-  
+
   /* Create a custom checkbox */
   .checkmark {
 	position: absolute;
@@ -2310,12 +2310,12 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	background-color: #fff;
 	border: 1px solid black;
   }
-  
+
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
 	background-color: white;
   }
-  
+
   /* When the checkbox is checked, add a blue background */
   .container input:checked ~ .checkmark {
 	width: 23px;
@@ -2323,19 +2323,19 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	background-color:white;
 	border: 1px solid black;
   }
-  
+
   /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
 	content: "";
 	position: absolute;
 	display: none;
   }
-  
+
   /* Show the checkmark when checked */
   .container input:checked ~ .checkmark:after {
 	display: block;
   }
-  
+
   /* Style the checkmark/indicator */
   .container .checkmark:after {
 	left: 6px;
@@ -2348,7 +2348,7 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 	}
-	
+
 
 
 
@@ -2376,17 +2376,17 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
   footer{
 	  position: relative;
   }
- 
+
 
    @keyframes bentoryBirdFly {
 	0% {
 		background-position: 0px 0px;
-		
+
 	}
 	100% {
 		background-position: -135px 0px;
-	
-	
+
+
 	}
   }
   .search-new-home-left img,
@@ -2552,7 +2552,7 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 /* .search-new-home{
 	display: grid!important;
 	grid-template-columns: 1fr 1fr;
-	
+
 }
 
 .search-new-home-left{
@@ -2572,7 +2572,7 @@ button.btn.dropdown-toggle.btn-light.bs-placeholder {
 	grid-template-columns: 1fr 1fr;
 	grid-column-start: 1;
 	grid-column-end: 3;
-	order: 1;	
+	order: 1;
 }
 
 
@@ -2622,7 +2622,7 @@ div#be-arrow-inverter:after{
     position: absolute;
 	content: url(../img/icon_select_box.png);
     right: 10px;
-    top: 10px;	
+    top: 10px;
 }
 
 div#be-arrow-inverter.be-arrow-inverter:after{
@@ -2851,7 +2851,7 @@ ul.be-arogomatics-menu p{
 	width: 100%;
 	background: url(../img/details/arrow_down.png) no-repeat  right 17px;
 	position: relative;
-	
+
 }
 ul.be-details-menu > .be-details--pertab:after{
     width: 100%;
@@ -2955,7 +2955,7 @@ dl.be-de-builders-logo h5 span {
 }
 .be-home-plan--tabs{
 	display: flex;
-	
+
 }
 .be-home-plan--tabs > li{
 	font-size: 23px;
@@ -3046,7 +3046,7 @@ dl.be-de-builders-logo h5 span {
 	cursor: pointer;
 }
 
-.grid-l1{ 
+.grid-l1{
     width: 100%;
     height: auto;
     min-height: 500px;
@@ -3054,9 +3054,9 @@ dl.be-de-builders-logo h5 span {
     padding: 10px
     }
 
-.header{    
-    width: 100%; 
-    text-align: left; 
+.header{
+    width: 100%;
+    text-align: left;
     width: 100%;
     background: url(../img/details/arrow_rgt.png) no-repeat right 50%;
     position: relative;
@@ -3064,21 +3064,21 @@ dl.be-de-builders-logo h5 span {
     font-size: 32px;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 5px; 
+    padding: 5px;
     cursor: pointer;
     margin: 0px !important;
-	border-bottom: 1px solid #818181; 
+	border-bottom: 1px solid #818181;
 }
 
 .level-box{
     width: 100%;
-    padding: 10px; 
-    display: none; 
+    padding: 10px;
+    display: none;
 	overflow: hidden;
 	height: auto;
     }
 
-.box-a1{ 
+.box-a1{
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -3086,7 +3086,7 @@ dl.be-de-builders-logo h5 span {
     }
 
 	.header-active{
-		
+
 		background: url(../img/details/arrow_down.png) no-repeat right 50%!important;
 	}
 	.be-entory-search{
@@ -3181,7 +3181,7 @@ dl.be-de-builders-logo h5 span {
 	span#footageOne-button,
 	span#footageTwo-button {
 		 text-align: center;
-	
+
 	}
 	.ui-widget.ui-widget-content {
 		border: 1px solid #c5c5c5;
@@ -3214,7 +3214,7 @@ dl.be-de-builders-logo h5 span {
 		right: 0px;
 		top: 50%;
 	}
-	
+
 	h3.betitle-my-info {
 		text-align: center;
 	}
@@ -3222,7 +3222,7 @@ dl.be-de-builders-logo h5 span {
 	.pln-tbs-modify.be-home-plan--tabs > li{
 		text-align: left!important;
 	}
-	
+
 	#be-myinfo .be-singing-input{
 		background: none!important;
 	}

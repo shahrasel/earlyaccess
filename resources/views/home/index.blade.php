@@ -7,7 +7,7 @@
 @section('content')
     <main>
         <section id="search-new-home-section" >
-            <h3 class="bentory-title-search--new font-weight-bold">Find Your Forever Home On-the-Go </h3>
+            <h3 class="bentory-title-search--new font-weight-bold">Find Your Forever Home<br/>On-the-Go </h3>
             <div class="search-new-home bntory-wrapper">
 
                 <div class="search-new-home-left bentory-common-animaiton">
@@ -29,8 +29,14 @@
             @csrf
             <section id="bentory-popular-city">
             <div class="bntory-wrapper">
-                <h3 class="bentory-city-title mt-50 mb-50 bentory-common-animaiton font-weight-bold">Get <span style="color: #10790F">FREE</span> Early Access</h3>
+                <h3 class="bentory-city-title mt-50 mb-10 bentory-common-animaiton font-weight-bold">Realtors!<br/>Get <span style="color: #10790F">FREE</span> Early Access</h3>
                 <div class="be-home-plan--box" id="be-myinfo">
+
+                    <div class="row">
+                        <div class="col-xl-12 mb-20 text-center">
+                            <p>Please fill out the form below to pre-register your free account. (REALTORS ONLY)</p>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-xl-6">
                             <h3 class="betitle-my-info"> <span class="binfo-inner"> Contact Info</span></h3>
@@ -135,40 +141,50 @@
 
                             <div class="be-singin-row">
 
-                                <label for="">Use alphanumeric (Ex. JAN1985)</label>
+                                <label for="" style="line-height: 22px;font-weight: normal">Note: Agent Code is for your buyer to tag you as their preferred Realtor after they sign up on the Buildentory App.</label>
+
+                                <label for="" style="line-height: 22px;font-weight: normal">Use either alphanumeric or all letters or all numbers. (Example: KIM1985 or REALTOR or 1234567)</label>
                                 <div style="display: flex; justify-content: left">
                                         <span>
-                                            <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" placeholder="J" id="text_1" name="text_1">
+                                            <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1"  id="text_1" name="text_1">
                                         </span>
                                     <span>
-                                            <input type="text" class="be-singing-input"  required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" placeholder="A" id="text_2" name="text_2">
+                                            <input type="text" class="be-singing-input"  required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" id="text_2" name="text_2">
                                         </span>
                                     <span>
-                                            <input type="text" class="be-singing-input" required  style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" placeholder="N" id="text_3" name="text_3">
+                                            <input type="text" class="be-singing-input" required  style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1"  id="text_3" name="text_3">
                                         </span>
                                     <span>
-                                            <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" placeholder="1" id="text_4" name="text_4">
+                                            <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" id="text_4" name="text_4">
                                         </span>
                                     <span>
-                                            <input type="text" class="be-singing-input"  required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" placeholder="9" id="text_5" name="text_5">
+                                            <input type="text" class="be-singing-input"  required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" id="text_5" name="text_5">
                                         </span>
                                     <span>
-                                            <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" placeholder="8" id="text_6" name="text_6">
+                                            <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" id="text_6" name="text_6">
                                         </span>
                                     <span>
-                                        <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" placeholder="5" id="text_7" name="text_7">
+                                        <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1" id="text_7" name="text_7">
                                     </span>
                                 </div>
+                                <div class="text-center mt-10" style="max-width: 300px">
+                                    {{--<button class="btn btn-success" onclick="resetCode()">RESET</button>--}}
+                                    <input type="button" class="btn btn-success" onclick="resetCode()" value="RESET">
+                                </div>
+
                                 <div  style="max-width: 300px;text-align: center;margin-top: 10px">
                                     <div id="loading_div" style="display: none"><img src="{{ asset('img/loader.gif') }}" style="width: 25px;height: 25px"></div>
                                     <p id="loading_status" style="display: none">Checking Agent Code Availibility</p>
                                 </div>
-
+                                <div  style="max-width: 300px;text-align: center;margin-top: 10px">
+                                    <a href="https://www.trec.texas.gov/apps/license-holder-search/index.php?lic_name=&lic_hp=&industry=Real+Estate" target="_blank">Look up renewal date on TREC.</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 text-left"><span class="eb-redtsar">*</span>Required Fields</div>
                     <div class="col-12 text-left mt-4">
+                        <label><input type="checkbox" name="is_agree" value="1">&nbsp;I agree with the Terms and Privacy.</label>
                         <label><input type="checkbox" name="is_interested" value="1" @if(old('is_interested')=='1') checked @endif>&nbsp;I'm interested in receiving new construction buyer leads with a Premium Account.</label>
                     </div>
                     <div class="col-12 text-left mt-4">
