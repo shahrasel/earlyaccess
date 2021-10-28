@@ -257,7 +257,7 @@
                 </div>
                 <div class="mob-reduce col-xl-3 col-md-4 col-sm-6 col-6 pt-25 p-r">
                     <div class="bentory-header-searchBtn">
-                        <a href="">GET FREE EARLY ACCESS</a>
+                        <a href="">Pre-Register Now</a>
                     </div>
 
                 </div>

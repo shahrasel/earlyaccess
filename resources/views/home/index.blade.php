@@ -34,13 +34,13 @@
 
                     <div class="row">
                         <div class="col-xl-12 mb-20 text-center">
-                            <p>Please fill out the form below to pre-register your free account. (REALTORS ONLY)</p>
+                            <p style="font-size: 16px">Please fill out the form below to pre-register your free account. (REALTORS ONLY)</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6">
+                        <div class="col-xl-6 col-md-6">
                             <h3 class="betitle-my-info"> <span class="binfo-inner"> Contact Info</span></h3>
-                            <div class="be-binfo--box">
+                            <div class="be-binfo--box ">
                                 <div class="be-singin-row">
                                     <label for="">First Name <span class="eb-redtsar">*</span></label>
                                     <input type="text" name="first_name" required="" class="be-singing-input" placeholder="First Name" value="{{ old('first_name') }}">
@@ -100,9 +100,9 @@
 
 
                         </div>
-                        <div class="col-xl-6">
+                        <div class="col-xl-6 col-md-6">
                             <h3 class="betitle-my-info"><span class="binfo-inner">Realtor Info</span></h3>
-                            <div class="be-singin-row">
+                            <div class="be-singin-row ">
                                 <label for="">Brokerage Name <span class="eb-redtsar">*</span></label>
                                 <input type="text" name="brokerage_name" required="" class="be-singing-input" placeholder="Brokerage Name" value="{{ old('brokerage_name') }}">
                                 @error('brokerage_name')
@@ -133,6 +133,10 @@
                                 <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
+                            <div  style="margin-top: 10px;color:#00a2ff ">
+                                Look up renewal date on TREC.
+                                <a class="btn btn-warning" style="background-color: #fff600;border: 1px solid #000; border-radius: 5px; color: #000" href="https://www.trec.texas.gov/apps/license-holder-search/index.php?lic_name=&lic_hp=&industry=Real+Estate" target="_blank">Look Up</a>
+                            </div>
 
 
 
@@ -141,9 +145,9 @@
 
                             <div class="be-singin-row">
 
-                                <label for="" style="line-height: 22px;font-weight: normal">Note: Agent Code is for your buyer to tag you as their preferred Realtor after they sign up on the Buildentory App.</label>
+                                <label for="" style="line-height: 22px;font-weight: normal">You’ll need a 7-digit Agent Code to let your buyers tag you as their preferred Realtor after they sign up on the Buildentory App. You can either use alphanumeric or all letters or all numbers. </label>
 
-                                <label for="" style="line-height: 22px;font-weight: normal">Use either alphanumeric or all letters or all numbers. (Example: KIM1985 or REALTOR or 1234567)</label>
+                                <label for="" style="line-height: 22px;font-weight: bold">(Example: KIM1985 or REALTOR or 1234567)</label>
                                 <div style="display: flex; justify-content: left">
                                         <span>
                                             <input type="text" class="be-singing-input" required style="border-radius: 5px;width: 37px;text-transform: uppercase" maxlength="1"  id="text_1" name="text_1">
@@ -169,30 +173,37 @@
                                 </div>
                                 <div class="text-center mt-10" style="max-width: 300px">
                                     {{--<button class="btn btn-success" onclick="resetCode()">RESET</button>--}}
-                                    <input type="button" class="btn btn-success" onclick="resetCode()" value="RESET">
+                                    <input type="button" class="btn btn-success" style="background-color: #fff600;border: 1px solid #000; border-radius: 5px; color: #000" onclick="resetCode()" value="RESET">
                                 </div>
 
                                 <div  style="max-width: 300px;text-align: center;margin-top: 10px">
                                     <div id="loading_div" style="display: none"><img src="{{ asset('img/loader.gif') }}" style="width: 25px;height: 25px"></div>
-                                    <p id="loading_status" style="display: none">Checking Agent Code Availibility</p>
+                                    <p id="loading_status" style="display: none;color: #ff0000">Checking Agent Code Availibility</p>
                                 </div>
-                                <div  style="max-width: 300px;text-align: center;margin-top: 10px">
-                                    <a href="https://www.trec.texas.gov/apps/license-holder-search/index.php?lic_name=&lic_hp=&industry=Real+Estate" target="_blank">Look up renewal date on TREC.</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="col-12 text-left"><span class="eb-redtsar">*</span>Required Fields</div>
-                    <div class="col-12 text-left mt-4">
-                        <label><input type="checkbox" name="is_agree" value="1">&nbsp;I agree with the Terms and Privacy.</label>
-                        <label><input type="checkbox" name="is_interested" value="1" @if(old('is_interested')=='1') checked @endif>&nbsp;I'm interested in receiving new construction buyer leads with a Premium Account.</label>
-                    </div>
-                    <div class="col-12 text-left mt-4">
-                        <label>Claim These Zip Codes</label>
-                        <div>
-                            <textarea name="message" class="be-singing-input" style="height: 100px" placeholder="Type Zips here...">{{ old('message') }}</textarea>
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-sm-12">
+                            <div class="col-12 text-left mt-4">
+                                <label><input type="checkbox" name="is_agree" value="1" required>&nbsp;I agree with the Terms and Privacy.</label><br/>
+                                <label><input type="checkbox" name="is_interested" value="1" @if(old('is_interested')=='1') checked @endif>&nbsp;I'm interested in receiving new construction buyer leads with a Premium Account.</label>
+                            </div>
+                            <div class="col-12 text-left mt-4">
+                                <label>Claim These Zip Codes</label>
+                                <div>
+                                    <textarea name="message" class="be-singing-input" style="height: 100px" placeholder="Type Zips here...">{{ old('message') }}</textarea>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col-xl-6 col-md-6 col-sm-12 mt-3 text-center">
+                            <a href="https://buildentory.com/media/settings_uploaded_files/6179e9ceda96c_2022_BuildentoryPremiumBrochure_Realtor_DFW-2.pdf" target="_blank"><img src="{{ asset('img/download_btn.png') }}"></a>
+                        </div>
+
                     </div>
+
                     <div class="row">
                         <input style="width: 280px; margin: 40px auto;" type="submit" class="bentory-singin-btn" value="Create My Account">
                     </div>
