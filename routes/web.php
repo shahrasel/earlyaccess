@@ -17,4 +17,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::post('/store', [App\Http\Controllers\HomeController::class, 'store'])->name('agent_store');
 Route::get('/thank-you', [App\Http\Controllers\HomeController::class, 'thankyou'])->name('thank_you');
 
+Route::get('/realtor-terms', [App\Http\Controllers\HomeController::class, 'realtor_terms'])->name('realtor_terms');
+Route::get('/realtor-privacy-policy', [App\Http\Controllers\HomeController::class, 'realtor_privacy_policy'])->name('realtor_privacy_policy');
+
 Route::post('/check-agent-code-availibility', [App\Http\Controllers\HomeController::class, 'checkAgentCodeAvailibility'])->name('checkAgentCodeAvailibility');

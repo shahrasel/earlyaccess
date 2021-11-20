@@ -43,6 +43,8 @@
     <img src="img/My_Profile_icon.svg" style="width: 35px; height: 35px;" alt="">
 </a>-->
 
+
+
 <a href="#" id="mobule_hamburger_btn">
     <button class="hamburger animate   collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false"><span></span></button>
 </a>
@@ -55,6 +57,7 @@
 -->
 <div class="bentory-user-singing-panel">
     <div class="bentory-singing-roundbox">
+
         <a href="#" class="bentory-btn-sign-cross"><img src="{{ asset('img/bentory_btn_cross.png') }}" alt=""></a>
 
         <ul class="bentory-signing-menus">
@@ -250,14 +253,14 @@
                     <div class="bentory-header-left pt-23 pb-23">
                         <div class="bentory-logo">
                             <h1>
-                                <a href="#"><img src="{{ asset('img/bentory_logo.svg') }}" alt="Built Entory"></a>
+                                <a href="{{ url('/') }}"><img src="{{ asset('img/bentory_logo.svg') }}" alt="Built Entory"></a>
                             </h1>
                         </div>
                     </div>
                 </div>
                 <div class="mob-reduce col-xl-3 col-md-4 col-sm-6 col-6 pt-25 p-r">
                     <div class="bentory-header-searchBtn">
-                        <a href="">Pre-Register Now</a>
+                        <a href="#early_access_form">Pre-Register Now</a>
                     </div>
 
                 </div>
@@ -283,23 +286,49 @@
             <div class="bntory-wrapper pt-90 pb-150">
                 <ul class="bentory-utilities-menus mt-30">
 
-                    <li><a href="#">Realtor Terms of Use</a></li>
-                    <li><a href="#">Realtor Privacy Policy</a></li>
+                    <li><a href="{{ url('/') }}/realtor-terms" target="_blank">Agent Terms of Use</a></li>
+                    <li><a href="{{ url('/') }}/realtor-privacy-policy" target="_blank">Agent Privacy Policy</a></li>
                     <li><a href="https://buildentory.com/admin">Agent Login</a></li>
                 </ul>
                 <div class="bentory-disclaim-box mt-30">
-                    <p>Disclaimer: Buildentory.com, Buildentory iOS & Android App promotes licensed Realtors, Mortgage Loan Officers and local/national Builders. We do not assume any liability for inaccuracies. We ask that you independently verify community, new home, lot, land acreage and/or rental data via listing agencies and authorized builder sales representatives.</p>
+                    <p>Disclaimer: Buildentory.com, Buildentory iOS & Android App promotes licensed Real Estate Agents, Mortgage Loan Officers and local/national Builders. We do not assume any liability for inaccuracies. We ask that you independently verify community, new home, lot, land acreage and/or rental data via listing agencies and authorized builder sales representatives.</p>
                 </div>
                 <ul class="bentory-social-menus mt-30">
-                    <li><a href="https://www.facebook.com/Buildentory/?ref=py_c&__xts__=68" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://youtu.be/f_Kov8QxYnM" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                    <li><a href="https://apps.apple.com/us/app/buildentory-real-estate/id1281722341" target="_blank"><i class="fab fa-apple"></i></a></li>
-                    <li><a href="#"><img src="{{ asset('img/icon_android.png') }}" alt=""></a></li>
+                    @if(!empty($system_settings_info->facebook_link))
+                        <li><a href="{{ $system_settings_info->facebook_link }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    @endif
+
+                    @if(!empty($system_settings_info->instragram_link))
+                        <li><a href="{{ $system_settings_info->instragram_link }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    @endif
+
+                    @if(!empty($system_settings_info->twitter_link))
+                        <li><a href="{{ $system_settings_info->twitter_link }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    @endif
+
+                    @if(!empty($system_settings_info->linkedin_link))
+                        <li><a href="{{ $system_settings_info->linkedin_link }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    @endif
+
+                    @if(!empty($system_settings_info->youtube_link))
+                        <li><a href="{{ $system_settings_info->youtube_link  }}" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    @endif
+
+                    {{--@if(!empty($system_settings_info->pinterest_link))
+                        <li><a href="{{ $system_settings_info->pinterest_link }}" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+                    @endif--}}
+
+                    @if(!empty($system_settings_info->email))
+                        <li><a href="mailto:{{ $system_settings_info->email }}" ><i class="fas fa-envelope"></i></a></li>
+                    @endif
+
+                    @if(!empty($system_settings_info->iphone_app_link))
+                        <li><a href="{{ $system_settings_info->iphone_app_link }}" target="_blank"><i class="fab fa-apple"></i></a></li>
+                    @endif
+
+                    @if(!empty($system_settings_info->android_app_link))
+                        <li><a href="{{ $system_settings_info->android_app_link }}" target="_blank"><img src="{{ asset('img/icon_android.png') }}" alt=""></a></li>
+                    @endif
 
                 </ul>
             </div>
@@ -331,6 +360,17 @@
 <script src="{{ asset('js/slick.min.js') }}"></script>
 <script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.sitekey') }}"></script>
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('{{ config('services.recaptcha.sitekey') }}', {action: 'contact'}).then(function(token) {
+            if (token) {
+                if(document.getElementById('recaptcha'))
+                    document.getElementById('recaptcha').value = token;
+            }
+        });
+    });
+</script>
 
 <script>
     $( function() {
@@ -444,5 +484,8 @@
 
 
 </script>
+
+@yield('javascript')
+
 </body>
 </html>

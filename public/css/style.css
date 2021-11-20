@@ -1069,7 +1069,7 @@ input.entory-search-btn:hover{
 	font-weight: normal;
 	padding: 40px 0 40px;
 	transition: .5s;
-	line-height: 1.5;
+	line-height: 1.25;
 
 }
 /* popular city  */
@@ -1123,7 +1123,7 @@ ul.bentory-popular-menus li a:hover::after{
 .bentory-city-title{
 	text-align: center;
 	font-size: 3rem;
-	line-height: 1.5;
+	line-height: 1.25;
 	transition: .5s;
 }
 .search-new-home-right a {
